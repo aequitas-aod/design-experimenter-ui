@@ -247,6 +247,7 @@ The view includes a progress bar, hidden by default, to notify the user that the
 
 Once the algorithm is done, a 'Results' button appears, which the user can press to inspect the results of the algorithm.
 Results can be charts, tables, or other types of data.
+From that dialog, the user can also download the outcome of the algorithm.
 
 > The 'Polarization' view is indeed yet another instance of this view, but with a different name.
 > The reason being: polarization is technically yet another pre-processing algorithm, with a different goal:
@@ -270,6 +271,32 @@ Results can be charts, tables, or other types of data.
 - values for all the aforementioned hyperparameters
 - pressure on the 'Run' button
 - pressure on the 'Next' button
+
+#### Summary Views
+
+A view aimed at summarising the operations performed so far.
+In particular, it shows a graph depicting all the datasets and the models created/provided so far,
+and how they are related to each other.
+
+The view also shows buttons 
+
+##### What
+
+![Summary View](./aequitas-ui-summary.drawio.svg)
+
+##### Where
+
+![Summary View in the overall Workflow](./aequitas-ui-summary.map.svg)
+
+##### Parameters for view instantiation
+
+- Textual information about the datasets and models created/provided so far
+- and their relationships
+- plus which buttons to show/hide (hence enabling/disabling going back to previous views)
+
+##### Data to be collected by the view
+
+- pressure on the buttons
 
 ### Technical Desiderata
 
