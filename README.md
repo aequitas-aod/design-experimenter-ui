@@ -88,7 +88,28 @@ In this way, when a view must collect inputs from the user, the UI knows which v
 
 In the following, we delve into the details of each view.
 
-> TODO: provide a detailed description of each view
+#### Dataset Choice and Test-set Choice Views
+
+A view for dataset provisioning.
+Dataset can be uploaded or selected from a list of available datasets.
+
+##### What 
+
+![Dataset Choice View](./aequitas-ui-dataset.drawio.svg)
+
+##### Where 
+
+![Dataset Choice View in the overall Workflow](./aequitas-ui-dataset.map.svg)
+
+##### Parameters for view instantiation
+
+- The list of datasets will be provided by the Web service, and these should appear as new entries in the list
+
+##### Data to be collected by the view
+
+- Either the file uploaded by the user
+- or the dataset selected by the user
+- pressure on the 'Next' button
 
 ### Technical Desiderata
 
