@@ -212,25 +212,27 @@ This is where the user specifies which biases to address in subsequent phases.
 - which sensitive features are selected for mitigation, for each fairness metric
 - pressure on the 'Next' button
 
-#### Data Mitigation View
+#### Mitigation View
 
-A view for choosing which dataset mitigation technique to apply.
+A view for choosing which (dataset, model, or outcome) mitigation technique to apply.
+This can be customised by the Web service, in order to serve the pre-, in-, and post-processing algorithm case.
 
 ##### What
 
-![Data Mitigation View](./aequitas-ui-data-mitigation.drawio.svg)
+![Data Mitigation View](./aequitas-ui-mitigation.drawio.svg)
 
 ##### Where
 
-![Data Mitigation View in the overall Workflow](./aequitas-ui-data-mitigation.map.svg)
+![Data Mitigation View in the overall Workflow](./aequitas-ui-mitigation.map.svg)
 
 ##### Parameters for view instantiation
 
 - Pre-processing algorithms names and acronyms will be provided by the Web service
+- Whether it is a pre-, in-, or post-processing algorithm (the value of `X` in the picture)
 
 ##### Data to be collected by the view
 
-- which pre-processing algorithm is selected
+- which algorithm is selected
 - pressure on the 'Next' button
 
 #### Pre-, In-, and Post-processing View
@@ -265,6 +267,8 @@ From that dialog, the user can also download the outcome of the algorithm.
 
 - The Web service will provide the hyperparameters (names, data type, and admissible values) of the algorithm
     + these should be rendered according to the most adequate input control for the data type
+    + this may include field for file upload if the algorithm requiers input files
+        * this is the case, e.g., for in-processing algorithms which operate on pre-trained models
 
 ##### Data to be collected by the view
 
