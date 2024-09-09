@@ -233,6 +233,44 @@ A view for choosing which dataset mitigation technique to apply.
 - which pre-processing algorithm is selected
 - pressure on the 'Next' button
 
+#### Pre-, In-, and Post-processing View
+
+A view for running a processing algorithm.
+This is a highly customisable view template which could be adapted to the needs of the specific algorithm.
+Customization occurs via the Web service, which provides the necessary parameters for the view
+This should serve pre-, in-, and post-processing algorithms.
+All such algorithms have hyperparameters that the user can set,
+but they differ from algorithm to algorithm.
+
+The view includes a progress bar, hidden by default, to notify the user that the algorithm is running.
+(No need to show actual progress, just a spinner or a progress bar that runs indefinitely.)
+
+Once the algorithm is done, a 'Results' button appears, which the user can press to inspect the results of the algorithm.
+Results can be charts, tables, or other types of data.
+
+> The 'Polarization' view is indeed yet another instance of this view, but with a different name.
+> The reason being: polarization is technically yet another pre-processing algorithm, with a different goal:
+> adding bias rather than removing it.
+
+##### What
+
+![Pre-, In-, and Post-processing View](./aequitas-ui-processing.drawio.svg)
+
+##### Where
+
+![Pre-, In-, and Post-processing View in the overall Workflow](./aequitas-ui-processing.map.svg)
+
+##### Parameters for view instantiation
+
+- The Web service will provide the hyperparameters (names, data type, and admissible values) of the algorithm
+    + these should be rendered according to the most adequate input control for the data type
+
+##### Data to be collected by the view
+
+- values for all the aforementioned hyperparameters
+- pressure on the 'Run' button
+- pressure on the 'Next' button
+
 ### Technical Desiderata
 
 - The UI will be a SPA written in JavaScript
