@@ -310,3 +310,6 @@ The view also shows buttons
 - When views contain charts, charts should be generated client-side
     * if this is too complex, the Web service may provide pictures of the charts instead 
     (so the UI must simply display pictures which are dynamically provided)
+- The Web service can be mocked by developers arbitrary, but the UI should be designed to 
+    1. receive 'Parameters for view instantiation' from the Web service and use them to render each view
+    2. send 'Data to be collected by the view' to the Web service upon transitioning to another view
