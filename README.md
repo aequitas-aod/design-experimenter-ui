@@ -111,6 +111,58 @@ Dataset can be uploaded or selected from a list of available datasets.
 - or the dataset selected by the user
 - pressure on the 'Next' button
 
+#### Data View 
+
+A view for dataset inspection (mostly focussing on the rows of the dataset).
+
+##### What
+
+![Data View](./aequitas-ui-dataset.drawio.svg)
+
+##### Where
+
+![Data View in the overall Workflow](./aequitas-ui-dataset.map.svg)
+
+##### Parameters for view instantiation
+
+- Rows of the dataset will be provided by the Web service,
+- as well as columns
+- and the whole dataset should appear as a table in the view
+
+##### Data to be collected by the view
+
+- pressure on the 'Next' button
+
+#### Features View
+
+A view for dataset inspection (mostly focussing on the schema of the dataset).
+This is where the user specifies the target and sensitive features.
+
+The view comes with a pop-up dialog giving insights about the data distribution of each feature,
+upon request.
+The dialog allows choosing among different types of charts (e.g. histograms, pie charts, etc.).
+
+##### What
+
+![Features View](./aequitas-ui-features.drawio.svg)
+
+##### Where
+
+![Features View in the overall Workflow](./aequitas-ui-features.map.svg)
+
+##### Parameters for view instantiation
+
+- Columns of the dataset will be provided by the Web service,
+- schema information about each feature (e.g. type, value range, etc.)
+- statistics about the data distribution of each feature (e.g. mean, median, mode, etc.)
+- \[in case chart generation does not occur on the client side\] pictures of the charts
+
+##### Data to be collected by the view
+
+- what feature IDs are marked as target
+- what feature IDs are marked as sensitive
+- pressure on the 'Next' button
+
 ### Technical Desiderata
 
 - The UI will be a SPA written in JavaScript
