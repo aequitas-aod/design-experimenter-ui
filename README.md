@@ -212,6 +212,27 @@ This is where the user specifies which biases to address in subsequent phases.
 - which sensitive features are selected for mitigation, for each fairness metric
 - pressure on the 'Next' button
 
+#### Data Mitigation View
+
+A view for choosing which dataset mitigation technique to apply.
+
+##### What
+
+![Data Mitigation View](./aequitas-ui-data-mitigation.drawio.svg)
+
+##### Where
+
+![Data Mitigation View in the overall Workflow](./aequitas-ui-data-mitigation.map.svg)
+
+##### Parameters for view instantiation
+
+- Pre-processing algorithms names and acronyms will be provided by the Web service
+
+##### Data to be collected by the view
+
+- which pre-processing algorithm is selected
+- pressure on the 'Next' button
+
 ### Technical Desiderata
 
 - The UI will be a SPA written in JavaScript
