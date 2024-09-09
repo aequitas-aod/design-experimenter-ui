@@ -185,9 +185,38 @@ This is where the user specifies the proxies for the sensitive features.
 ##### Data to be collected by the view
 
 - what feature IDs are marked as proxies for each sensitive feature
+- pressure on the 'Next' button
+
+#### Detection View
+
+A view for dataset inspection (mostly focussing on fairness metrics).
+This is where the user specifies which biases to address in subsequent phases.
+
+##### What
+
+![Detection View](./aequitas-ui-detection.drawio.svg)
+
+##### Where
+
+![Detection View in the overall Workflow](./aequitas-ui-detection.map.svg)
+
+##### Parameters for view instantiation
+
+- Fairness metrics names and acronyms will be provided by the Web service,
+- along with the names of the sensitive features (as inserted by the user in previous views),
+- and the values of each fairness metric for each sensitive feature, w.r.t. the output features
+- \[in case chart generation does not occur on the client side\] pictures of the charts
+
+##### Data to be collected by the view
+
+- which sensitive features are selected for mitigation, for each fairness metric
+- pressure on the 'Next' button
 
 ### Technical Desiderata
 
 - The UI will be a SPA written in JavaScript
 - Therefore UI will consist of a Node project, and possibly rely on a framework like React, Angular, or Vue
 - Framework preferences (descending): __Vue__ > React > Angular
+- When views contain charts, charts should be generated client-side
+    * if this is too complex, the Web service may provide pictures of the charts instead 
+    (so the UI must simply display pictures which are dynamically provided)
