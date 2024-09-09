@@ -163,6 +163,29 @@ The dialog allows choosing among different types of charts (e.g. histograms, pie
 - what feature IDs are marked as sensitive
 - pressure on the 'Next' button
 
+#### Dependencies View
+
+A view for dataset inspection (mostly focussing on the dependencies between the features).
+This is where the user specifies the proxies for the sensitive features.
+
+##### What
+
+![Dependencies View](./aequitas-ui-dependencies.drawio.svg)
+
+##### Where
+
+![Dependencies View in the overall Workflow](./aequitas-ui-dependencies.map.svg)
+
+##### Parameters for view instantiation
+
+- Correlation matrix of the dataset will be provided by the Web service,
+- as well as other charts, such as functional dependencies graphs, etc.
+- a tree of sensitive features and their mostly correlated features is provided too
+
+##### Data to be collected by the view
+
+- what feature IDs are marked as proxies for each sensitive feature
+
 ### Technical Desiderata
 
 - The UI will be a SPA written in JavaScript
