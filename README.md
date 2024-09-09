@@ -313,3 +313,10 @@ The view also shows buttons
 - The Web service can be mocked by developers arbitrary, but the UI should be designed to 
     1. receive 'Parameters for view instantiation' from the Web service and use them to render each view
     2. send 'Data to be collected by the view' to the Web service upon transitioning to another view
+- The UI code should include fine-grained unit tests and automated procedure for running them
+    + code coverage should be at least 80%, and automatically computable
+- The JS code should be well organized, to support reusability and maintainability
+    + the code (and its documentation, if any) should be written in English
+- Docker specifications may be exploited to automate demos and tests
+- The UI should be responsive, and should be tested on different devices and browsers
+
