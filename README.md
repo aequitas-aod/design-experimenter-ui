@@ -95,11 +95,11 @@ Dataset can be uploaded or selected from a list of available datasets.
 
 ##### What 
 
-![Dataset Choice View](./aequitas-ui-dataset.drawio.svg)
+![Dataset Choice View](./aequitas-ui-dataset-choice.drawio.svg)
 
 ##### Where 
 
-![Dataset Choice View in the overall Workflow](./aequitas-ui-dataset.map.svg)
+![Dataset Choice View in the overall Workflow](./aequitas-ui-dataset-choice.map.svg)
 
 ##### Parameters for view instantiation
 
